@@ -1,0 +1,7 @@
+Host: sql7.freesqldatabase.com
+Database name: sql7740123
+Database user: sql7740123
+Database password: GFa2bL9rfn
+Port number: 3306
+
+url: https://www.phpmyadmin.co
