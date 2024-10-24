@@ -1,0 +1,3395 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/15/2024 11:20:38 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-5G0AINV"
+  DTS:CreatorName="DESKTOP-5G0AINV\João Cunha"
+  DTS:DTSID="{3C12FDDF-0A5B-4DCB-BE2C-DC9EA0206366}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="2070"
+  DTS:ObjectName="DimClubs"
+  DTS:PackageType="5"
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{BB61FDE8-BE12-4EEE-917D-1EB95E2C43CE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Insert_DimClubes"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6AE81B3E-2F70-43E0-82CA-D88086318962}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert_DimClubes">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Insert_DimClubes\Componente Script"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Inclui e executa código de script personalizado. Por exemplo, aplique uma regra de negócio que limite um intervalo de valores válidos em uma coluna &quot;de entrada&quot; ou adicione valores em duas colunas e calcule a média da soma.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;13"
+              description="Inclui e executa código de script personalizado. Por exemplo, aplique uma regra de negócio que limite um intervalo de valores válidos em uma coluna &quot;de entrada&quot; ou adicione valores em duas colunas e calcule a média da soma."
+              name="Componente Script"
+              version="13">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Armazena o código-fonte do componente"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="33">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_9e23bfe277ce42c8907cb016abd52f2f")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_9e23bfe277ce42c8907cb016abd52f2f")]
+[assembly: AssemblyCopyright("Copyright @  2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using System.Net.Http;
+using System.Text;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+using Newtonsoft.Json.Linq;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Entrada0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Entrada0_ProcessInputRow(Entrada0Buffer Row)
+    {
+        // Obtenha o nome do clube da vari�vel SSIS (User::ClubeNome)
+        string clubeNome = Row.ClubeNome;
+
+        // Substitua com a sua chave da API do OpenAI
+        string apiKey = "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";
+
+        // Configura��o da API OpenAI
+        string apiUrl = "https://api.openai.com/v1/chat/completions";
+
+        // Cria��o do corpo da requisi��o (request body)
+        var requestBody = new
+        {
+            model = "gpt-4", // Ou use "gpt-3.5-turbo" se quiser outro modelo
+            messages = new[]
+            {
+        new { role = "system", content = "S� quero a sigla do clube." },
+        new { role = "user", content = clubeNome }
+    },
+            max_tokens = 50 // Definir limite de tokens para uma resposta curta
+        };
+
+        // Converta o corpo da requisi��o para JSON
+        string jsonBody = Newtonsoft.Json.JsonConvert.SerializeObject(requestBody);
+
+        // Fa�a a chamada � API do OpenAI
+        using (HttpClient client = new HttpClient())
+        {
+            // Adicionar o cabe�alho de autentica��o (API Key)
+            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
+
+            // Enviar a requisi��o para a API
+            var content = new StringContent(jsonBody, Encoding.UTF8, "application/json");
+
+            // Fazer a requisi��o de forma s�ncrona
+            HttpResponseMessage response = client.PostAsync(apiUrl, content).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Ler a resposta da API
+                string responseContent = response.Content.ReadAsStringAsync().Result;
+
+                // Parse da resposta JSON
+                var jsonResponse = JObject.Parse(responseContent);
+                string reply = jsonResponse["choices"]?[0]?["message"]?["content"]?.ToString().Trim();
+
+                if (!string.IsNullOrEmpty(reply))
+                {
+                    // Armazenar a resposta (sigla do clube) em uma vari�vel SSIS
+                    Row.ClubeCodigo = reply;
+                }
+                else
+                {
+                    // Caso a resposta esteja vazia ou no formato inesperado
+                    Row.ClubeCodigo = "ERRO";
+                }
+            }
+            else
+            {
+                // Tratar caso ocorra um erro na requisi��o HTTP
+                Row.ClubeCodigo = "ERRO";
+            }
+        }
+
+    }
+}
+
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Entrada0Buffer: ScriptBuffer
+
+{
+    public Entrada0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String ClubeNome
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+    }
+    public bool ClubeNome_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public String ClubeCodigo
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool ClubeCodigo_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("A propriedade IsNull não pode ser definida como False. Em vez de fazer isso, atribua um valor à coluna.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9e23bfe277ce42c8907cb016abd52f2f.Properties.Settings.get_Default():SC_9e23bfe277ce42c8907cb016abd52f2f.Properties.Sett" +
+    "ings")]
+
+namespace SC_9e23bfe277ce42c8907cb016abd52f2f.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Entrada 0", StringComparison.Ordinal))
+        {
+            Entrada0_ProcessInput(new Entrada0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Entrada0_ProcessInput(Entrada0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Entrada0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Entrada0_ProcessInputRow(Entrada0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[packages.config]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<packages>
+  <package id="System.IO" version="4.3.0" targetFramework="net472" />
+</packages>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:Language>msBuild</msb:Language>
+    <msb:CodeName>SC_9e23bfe277ce42c8907cb016abd52f2f</msb:CodeName>
+    <msb:DisplayName>SC_9e23bfe277ce42c8907cb016abd52f2f</msb:DisplayName>
+    <msb:ProjectId>{26ED9895-02FE-41F1-9671-B2F3EDAA39C4}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_9e23bfe277ce42c8907cb016abd52f2f.csproj" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="packages.config" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_9e23bfe277ce42c8907cb016abd52f2f.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C244BB29-E43B-4954-8EAD-6E14E76ABDB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_9e23bfe277ce42c8907cb016abd52f2f</RootNamespace>
+    <AssemblyName>SC_9e23bfe277ce42c8907cb016abd52f2f</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>C:\Users\João Cunha\AppData\Local\Temp\Vsta\SSIS_SC160\VstaSN38gEnF5UaQDVHc6IHy5g\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>C:\Users\João Cunha\AppData\Local\Temp\Vsta\SSIS_SC160\VstaSN38gEnF5UaQDVHc6IHy5g\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>C:\Users\João Cunha\AppData\Local\Temp\Vsta\SSIS_SC160\VstaSN38gEnF5UaQDVHc6IHy5g\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>C:\Users\João Cunha\AppData\Local\Temp\Vsta\SSIS_SC160\VstaSN38gEnF5UaQDVHc6IHy5g\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>C:\Users\João Cunha\AppData\Local\Temp\Vsta\SSIS_SC160\VstaSN38gEnF5UaQDVHc6IHy5g\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>C:\Users\João Cunha\AppData\Local\Temp\Vsta\SSIS_SC160\VstaSN38gEnF5UaQDVHc6IHy5g\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>C:\Users\João Cunha\AppData\Local\Temp\Vsta\SSIS_SC160\VstaSN38gEnF5UaQDVHc6IHy5g\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>C:\Users\João Cunha\AppData\Local\Temp\Vsta\SSIS_SC160\VstaSN38gEnF5UaQDVHc6IHy5g\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC160</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9e23bfe277ce42c8907cb016abd52f2f.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9e23bfe277ce42c8907cb016abd52f2f.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9e23bfe277ce42c8907cb016abd52f2f.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_9e23bfe277ce42c8907cb016abd52f2f.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_9e23bfe277ce42c8907cb016abd52f2f.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Armazena a representação binária do componente"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_9e23bfe277ce42c8907cb016abd52f2f.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMXuEGcAAAAAAAAAAOAAIiALATAAACIAAAAIAAAAAAAAZkEA
+AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACgAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAABRBAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAbCEAAAAgAAAAIgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAYAAAAAYAAAAkAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAIAAAAACAAAAKgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABI
+QQAAAAAAAEgAAAACAAUAnCUAAMAaAAABAAAAAAAAAFxAAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CexIAAAoqHgJ7EwAACioeAnsUAAAKKnICKBUAAAoCA30S
+AAAKAgR9EwAACgIFfRQAAAoqAAAAEzADAFkAAAABAAARA3UBAAAbCgIGLkwGLEcoFgAACgJ7EgAA
+CgZ7EgAACm8XAAAKLC8oGAAACgJ7EwAACgZ7EwAACm8ZAAAKLBcoGgAACgJ7FAAACgZ7FAAACm8b
+AAAKKhYqFyoAAAATMAMASwAAAAAAAAAgCDz5ASApVVWlWigWAAAKAnsSAAAKbxwAAApYIClVVaVa
+KBgAAAoCexMAAApvHQAAClggKVVVpVooGgAACgJ7FAAACm8eAAAKWCoAEzAHAIoAAAACAAARFHIB
+AABwGY0OAAABJRYCexIAAAoKEgAlcQUAABuMBQAAGy0EJhQrC/4WBQAAG28fAAAKoiUXAnsTAAAK
+CxIBJXEGAAAbjAYAABstBCYUKwv+FgYAABtvHwAACqIlGAJ7FAAACgwSAiVxBwAAG4wHAAAbLQQm
+FCsL/hYHAAAbbx8AAAqiKCAAAAoqHgJ7IQAACioeAnsiAAAKKlYCKBUAAAoCA30hAAAKAgR9IgAA
+CioTMAMAQQAAAAMAABEDdQgAABsKAgYuNAYsLygWAAAKAnshAAAKBnshAAAKbxcAAAosFygYAAAK
+AnsiAAAKBnsiAAAKbxkAAAoqFioXKtIgrZhv8iApVVWlWigWAAAKAnshAAAKbxwAAApYIClVVaVa
+KBgAAAoCeyIAAApvHQAAClgqAAATMAcAYgAAAAQAABEUcmkAAHAYjQ4AAAElFgJ7IQAACgoSACVx
+BQAAG4wFAAAbLQQmFCsL/hYFAAAbbx8AAAqiJRcCeyIAAAoLEgElcQYAABuMBgAAGy0EJhQrC/4W
+BgAAG28fAAAKoiggAAAKKh4CKCMAAAoqHgIoJAAACioAABswBgA+AQAABQAAEQNvEwAABgpyqQAA
+cAty9AEAcAxySgIAcBiNCQAAGyUWclYCAHByZAIAcHMlAAAKoiUXcpoCAHAGcyUAAAqiHzJzJgAA
+CignAAAKDXMoAAAKEwQRBG8pAAAKcqQCAHBywAIAcAcoKgAACm8rAAAKCSgsAAAKctACAHBzLQAA
+ChMFEQQIEQVvLgAACm8vAAAKEwYRBm8wAAAKOYcAAAARBm8xAAAKbzIAAApvMwAACig0AAAKcvIC
+AHBvNQAACiUtBCYUKz4WjCsAAAFvNgAACiUtBCYUKyxyAgMAcG82AAAKJS0EJhQrG3ISAwBwbzYA
+AAolLQQmFCsKbx8AAApvNwAAChMHEQcoOAAACi0KAxEHbxUAAAbeJgNyIgMAcG8VAAAG3hkDciID
+AHBvFQAABt4MEQQsBxEEbzkAAArcKgAAARAAAAIAUgDfMQEMAAAAAB4CKBkAAAYqKgIDBAUoOgAA
+CipSAns7AAAKAns8AAAKFpRvPQAACioiAhYoPgAACiomAhcDKD8AAAoqWgMsCAIXKEAAAAoqciwD
+AHBzQQAACnoeAihCAAAKKh4CKEMAAAoqfgIoRAAACgICcx0AAAZ9BgAABAICcx4AAAZ9BwAABCqS
+BHL9AwBwGm9FAAAKLBUCBQIDKEYAAAoOBHMSAAAGbxsAAAYqSisHAgNvHAAABgNvFwAABi3xKgYq
+OgIoFQAACgIDfQgAAAQqOgIoFQAACgIDfQkAAAQqHgIoFQAACiqufgoAAAQtHnIRBABw0AkAAAIo
+RwAACm9IAAAKc0kAAAqACgAABH4KAAAEKhp+CwAABCoeAoALAAAEKhp+DAAABCoeAihKAAAKKi5z
+JAAABoAMAAAEKkJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAPAIAAAjfgAAXAkA
+ALAJAAAjU3RyaW5ncwAAAAAMEwAAhAQAACNVUwCQFwAAEAAAACNHVUlEAAAAoBcAACADAAAjQmxv
+YgAAAAAAAAACAAABVxWiCQkFAAAA+gEzABYAAAEAAAAxAAAACgAAAAwAAAAlAAAAFgAAAEoAAAAf
+AAAABQAAAAUAAAAMAAAADQAAAAwAAAABAAAABgAAAAEAAAAFAAAAAAClBAEAAAAAAAYAXAPQBgYA
+8APQBgYAdQK9Bg8ARAcAAAYAvQJnBQYAPwNnBQYAIANnBQYA1wNnBQYAfANnBQYAlQNnBQYA1AJn
+BQYA7wJYBAYAPQLQBgYAcAgTBQYAEQK9BgYAiQK9BgYACAO9BgoAsAOdAQ4AmgjoBQ4A3wjoBQ4A
+OAHoBQoAjwadARIAgAadAQoA0AWdAQoAwwidAQYAWAK9BgYAoAbwBgYAtAVSBRYAKAKFBBYApAKF
+BBYA6wE9BQYACABwAAYAfgQTBQYAYQYTBRoAIgmTBQ4AJAgACA4AGAgACAYATwRlCQYAAQDHBw4A
+7QjoBRoAXwj4BRoAKwX4BQYAGwATBQYATAETBQYAeQUTBQYAowUTBQYAvgETBQYAWAETBQYAlgln
+BQAAAABWAAAAAAABAAEAAAEQADcAAAA5AAEAAQAAARAAIQAAADkABAAIAAEAEAAyBQAAGAAGAA4A
+AQAQAHEGAABZAAYAEgABABAApQgAAGUABgAZAAEAEAD0BwAAOQAIAB0AAQAQAI8HAAA5AAkAHgAA
+ABAA9wZgBzkACgAfAAABEAC+B2AHfQAMACMAIQC6ACwAIQDKADAAIQDdADQAIQCrACwAIQDyADAA
+BgD0B8UBBgCPB8kBAQCzCM0BAQCzCM0BEQAfBdEBEQDbAdUBEQAEAdkBUCAAAAAAhgibBCEBAQBY
+IAAAAACGCFMH3QEBAGAgAAAAAIYI5QfiAQEAaCAAAAAAhhiwBtsAAQCIIAAAAADGAN4H5wEEAPAg
+AAAAAMYAFAHsAQUASCEAAAAAxgByBIEABQDeIQAAAACGCHwBIQEFAOYhAAAAAIYI+QjdAQUA7iEA
+AAAAhhiwBsUABQAEIgAAAADGAN4H5wEHAFEiAAAAAMYAFAHsAQgAiCIAAAAAxgByBIEACAD2IgAA
+AADGAA4EBgAIAP4iAAAAAMYAGQQGAAgACCMAAAAAxgBxCfABCABkJAAAAACGGLAGBgAJAGwkAAAA
+AIYYsAZaAQkAdyQAAAAAhgiPAYEADACMJAAAAACGCM0EJgEMAJUkAAAAAIYIwAUQAAwAnyQAAAAA
+hgjiBPYBDQC2JAAAAACGAIoJJgEOAL4kAAAAAIYAdwgmAQ4AxiQAAAAAhhiwBgYADgDmJAAAAADG
+AFgJ+wEOAAslAAAAAMYBTwnwARIAHiUAAAAAxgFxCfABEwAgJQAAAACGGLAGBQIUAC8lAAAAAIYY
+sAYFAhUAPiUAAAAAgxiwBgYAFgBGJQAAAACTCJwGCwIWAHIlAAAAAJMIwwEQAhYAeSUAAAAAkwjP
+ARUCFgCBJQAAAACWCIMIGwIXAIglAAAAAIYYsAYGABcAkCUAAAAAkRi2BiACFwAAAAEAnwQAAAIA
+VwcAAAMA6QcAAAEAJQQAAAEAgAEAAAIA/QgAAAEAJQQAAAEAjgkAAAEAlQYAAAIAmQcAAAMA3gUA
+AAEAJQQAAAEAJQQAAAEAXwAAAAIAhQEAAAMAlQYAAAQA3gUAAAEAlQYAAAEAjgkAAAEAyQgAAAEA
+yQgAAAEAJQQJALAGAQARALAGBgAZALAGCgApALAGEAAxALAGEAA5ALAGEABBALAGEABJALAGEABR
+ALAGEABZALAGEABhALAGEABpALAGBgCBALAGFQCJALAGBgCRALAGBgDRALAGBgDxALAGGwAMALoA
+LAAMAMoAMAAMAN0ANABxALAGBgAUAIMITQAUAN4HVwAcAIMITQAcAN4HVwAkAIMITQAkAN4HVwAU
+ABQBbwAcABQBbwAkABQBbwBxAHIEgQAJAVgIiwBEAKsALABEAPIAMADJAA4EBgDJABkEBgBMALAG
+xQBUALAG2wAZAWcI5QCZALAGBgCZADcI6gAJAVEI8AApAacA9gAxAU0A/AChALAGAgGZAJ0ACwFc
+AI8IIQGpACABJgGpANMIKgFBAYsAMAFkAI8IIQFJAQsCQAFJAQEFRwFRAQEFTgEJARoFgQAJAZ8J
+VQFhAQMCBgCxALAGWgGxAJUGZAGxAJkHaAG5AHsEbAGxAPIEcQGxAAoFdgGxAPkEAQBpAbAGEACx
+AIoJJgGxAHcIJgHJALAGBgAJAd4HfAHJAK0HhAF5AWoBigF5AZIJkwHZALAGmQH5ALAGBgAhAGsA
+FAMuAAsASgIuABMAUwIuABsAcgIuACMAewIuACsApAIuADMApAIuADsApAIuAEMAewIuAEsAqgIu
+AFMApAIuAFsAwQJBAGsAFANDAGMADwNhAGsAFANjAGMADwOAAHMADwOBAGsAFAODAHsADwOgAHMA
+DwOhAGsAFAPAAHMADwPgAHMADwMjAYMADwNAAXMADwNJAYsAcgJgAXMADwNpAYsAcgKAAXMADwOB
+AWMADwOgAXMADwM4AHUAngCpALAAAgABAAMABAAFAAYACQAKAAoADAAAAJ8EJAIAAFcHKQIAAOkH
+LgIAAIABJAIAAP0IKQIAAJMBMwIAANEENwIAAMQFMwIAAOYENwIAAKAGOwIAAOMBQAIAAIcIRQIC
+AAEAAwACAAIABQACAAMABwACAAgACQACAAkACwACABMADQACABQADwABABUAEQABABYAEwACACAA
+FQACACEAFwABACIAFwACACMAGQAhAEUAXwBnAH4AhQCIAJUAvgDNABkBOQEEgAAAAQAAAAAAAAAA
+AAAAAAArBAAABAAAAAAAAAAAAAAAoQFnAAAAAAAQAAAAAAAAAAAAAACqAQUJAAAAAAQAAgAAAAAA
+AAAAALMB6AUAAAAAEAAAAAAAAAAAAAAAqgEuCQAAAAAEAAAAAAAAAAAAAAChARMFAAAAAA0AAAAA
+AAAAAAAAALwBkwUAAAAAAAAAAAEAAAABBwAAAAAAAAQAGwYBAAAABAAqBgIAAAAEADwGAAAAAAYA
+DQYBAAAABgBQBgAAAFRhc2tgMQBFcXVhbGl0eUNvbXBhcmVyYDEASW50MzIAPD5mX19Bbm9ueW1v
+dXNUeXBlMWAyADw+Zl9fQW5vbnltb3VzVHlwZTBgMwBnZXRfVVRGOAA8TW9kdWxlPgBJbnB1dElE
+AG1zY29ybGliAFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljAFJlYWRBc1N0cmluZ0FzeW5jAFBv
+c3RBc3luYwBBZGQAPHJvbGU+aV9fRmllbGQAPG1vZGVsPmlfX0ZpZWxkADxtZXNzYWdlcz5pX19G
+aWVsZAA8bWF4X3Rva2Vucz5pX19GaWVsZAA8Y29udGVudD5pX19GaWVsZABkZWZhdWx0SW5zdGFu
+Y2UAR2V0SGFzaENvZGUAZ2V0X0lzU3VjY2Vzc1N0YXR1c0NvZGUASHR0cFJlc3BvbnNlTWVzc2Fn
+ZQBJRGlzcG9zYWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBnZXRfcm9s
+ZQBJbnB1dE5hbWUAZ2V0X0NsdWJlTm9tZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5QaXBlbGlu
+ZQBUeXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBBcHBsaWNhdGlv
+blNldHRpbmdzQmFzZQBEaXNwb3NlAFBhcnNlAERlYnVnZ2VyQnJvd3NhYmxlU3RhdGUARWRpdG9y
+QnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2Vy
+Q29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAERlYnVnZ2VyQnJvd3NhYmxlQXR0cmli
+dXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2Vt
+Ymx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBEZWJ1Z2dlckhp
+ZGRlbkF0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNj
+cmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5
+UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29t
+cG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGlt
+ZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQB2YWx1ZQBTQ185
+ZTIzYmZlMjc3Y2U0MmM4OTA3Y2IwMTZhYmQ1MmYyZgBFbmNvZGluZwBTeXN0ZW0uUnVudGltZS5W
+ZXJzaW9uaW5nAFRvU3RyaW5nAEdldFN0cmluZwBTeXN0ZW0uQ29tcG9uZW50TW9kZWwAZ2V0X21v
+ZGVsAFNDXzllMjNiZmUyNzdjZTQyYzg5MDdjYjAxNmFiZDUyZjJmLmRsbABnZXRfQ2x1YmVOb21l
+X0lzTnVsbABzZXRfQ2x1YmVDb2RpZ29fSXNOdWxsAFNldE51bGwAZ2V0X0l0ZW0Ac2V0X0l0ZW0A
+U3lzdGVtAFRyaW0AcmVzb3VyY2VNYW4ASlRva2VuAFNjcmlwdE1haW4AU3lzdGVtLkNvbmZpZ3Vy
+YXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24ASW52YWxpZE9wZXJh
+dGlvbkV4Y2VwdGlvbgBOZXd0b25zb2Z0Lkpzb24AU3RyaW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5m
+bwBzZXRfQ2x1YmVDb2RpZ28AT3V0cHV0TmFtZU1hcABPdXRwdXRNYXAAU3lzdGVtLk5ldC5IdHRw
+AE5ld3RvbnNvZnQuSnNvbi5MaW5xADxyb2xlPmpfX1RQYXIAPG1vZGVsPmpfX1RQYXIAPG1lc3Nh
+Z2VzPmpfX1RQYXIAPG1heF90b2tlbnM+al9fVFBhcgA8Y29udGVudD5qX19UUGFyAElGb3JtYXRQ
+cm92aWRlcgBFbnRyYWRhMEJ1ZmZlcgBQaXBlbGluZUJ1ZmZlcgBTY3JpcHRCdWZmZXIAZ2V0X1Jl
+c291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50
+aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ185ZTIzYmZlMjc3Y2U0MmM4
+OTA3Y2IwMTZhYmQ1MmYyZi5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5n
+TW9kZXMAZ2V0X21lc3NhZ2VzAFNDXzllMjNiZmUyNzdjZTQyYzg5MDdjYjAxNmFiZDUyZjJmLlBy
+b3BlcnRpZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5kZXhlcwBT
+ZXR0aW5ncwBTeXN0ZW0uVGhyZWFkaW5nLlRhc2tzAEVxdWFscwBnZXRfbWF4X3Rva2VucwBDb25u
+ZWN0aW9ucwBTeXN0ZW0uTmV0Lkh0dHAuSGVhZGVycwBIdHRwSGVhZGVycwBIdHRwUmVxdWVzdEhl
+YWRlcnMAZ2V0X0RlZmF1bHRSZXF1ZXN0SGVhZGVycwBDb25jYXQARm9ybWF0AEpPYmplY3QAU2Vy
+aWFsaXplT2JqZWN0AEVuZE9mUm93c2V0AGdldF9EZWZhdWx0AGdldF9SZXN1bHQASHR0cENsaWVu
+dABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQAZ2V0X0NvbnRl
+bnQAU3RyaW5nQ29udGVudABIdHRwQ29udGVudABnZXRfY29udGVudABNaWNyb3NvZnQuU3FsU2Vy
+dmVyLlR4U2NyaXB0AEpzb25Db252ZXJ0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlwZWxpbmVIb3N0
+AEVudHJhZGEwX1Byb2Nlc3NJbnB1dABTeXN0ZW0uVGV4dABFbnRyYWRhMF9Qcm9jZXNzSW5wdXRS
+b3cATmV4dFJvdwBnZXRfQXNzZW1ibHkASXNOdWxsT3JFbXB0eQAAAAAAZ3sAewAgAG0AbwBkAGUA
+bAAgAD0AIAB7ADAAfQAsACAAbQBlAHMAcwBhAGcAZQBzACAAPQAgAHsAMQB9ACwAIABtAGEAeABf
+AHQAbwBrAGUAbgBzACAAPQAgAHsAMgB9ACAAfQB9AAA/ewB7ACAAcgBvAGwAZQAgAD0AIAB7ADAA
+fQAsACAAYwBvAG4AdABlAG4AdAAgAD0AIAB7ADEAfQAgAH0AfQAAgUlzAGsALQBwAHIAbwBqAC0A
+ZgAwAGIANgBnAFQAdwBvADQAdwBOAEoAUAByAC0ASABqAEEAVwBWAEcAdQB5AGwARQBjADAAdwBF
+AGQANgAxAFkAWQBfAGsARQB0AHoAYQBSAFEAdAAtAFMAMQBmAE8ANwAtAGIAUQBMAGkAUgBvAHEA
+dgBnAEoAQwBnAHkAUQBDAHgAdABqAGsAZQBtAFUAcwBZAFQAMwBCAGwAYgBrAEYASgBEAFYAUQBu
+AGwAagA5AFMAagB3AFQALQBVAG0ARgBUAFIAZgBaAGYANQBIAEcAUgBCAEkAMwBWAGMAdAA2AFUA
+LQBnADYAcQB3AEwAMgBQADcANQBQAFEAMAA5AGgAWABBAF8AbwBLAEUAdQB5AGQAQwBiAFEAMQAt
+AEkAawAzADQANgA4AGwAXwBpAGMAbwAwAEEAAVVoAHQAdABwAHMAOgAvAC8AYQBwAGkALgBvAHAA
+ZQBuAGEAaQAuAGMAbwBtAC8AdgAxAC8AYwBoAGEAdAAvAGMAbwBtAHAAbABlAHQAaQBvAG4AcwAA
+C2cAcAB0AC0ANAABDXMAeQBzAHQAZQBtAAA1UwDzACAAcQB1AGUAcgBvACAAYQAgAHMAaQBnAGwA
+YQAgAGQAbwAgAGMAbAB1AGIAZQAuAAEJdQBzAGUAcgAAG0EAdQB0AGgAbwByAGkAegBhAHQAaQBv
+AG4AAA9CAGUAYQByAGUAcgAgAAAhYQBwAHAAbABpAGMAYQB0AGkAbwBuAC8AagBzAG8AbgAAD2MA
+aABvAGkAYwBlAHMAAA9tAGUAcwBzAGEAZwBlAAAPYwBvAG4AdABlAG4AdAAACUUAUgBSAE8AAIDP
+QQAgAHAAcgBvAHAAcgBpAGUAZABhAGQAZQAgAEkAcwBOAHUAbABsACAAbgDjAG8AIABwAG8AZABl
+ACAAcwBlAHIAIABkAGUAZgBpAG4AaQBkAGEAIABjAG8AbQBvACAARgBhAGwAcwBlAC4AIABFAG0A
+IAB2AGUAegAgAGQAZQAgAGYAYQB6AGUAcgAgAGkAcwBzAG8ALAAgAGEAdAByAGkAYgB1AGEAIAB1
+AG0AIAB2AGEAbABvAHIAIADgACAAYwBvAGwAdQBuAGEALgABE0UAbgB0AHIAYQBkAGEAIAAwAABx
+UwBDAF8AOQBlADIAMwBiAGYAZQAyADcANwBjAGUANAAyAGMAOAA5ADAANwBjAGIAMAAxADYAYQBi
+AGQANQAyAGYAMgBmAC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAA
+qvzGLGj6hka0vac1SklJAwAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERPQUgAQERdQoVEggDEwAT
+ARMCAwYTAAMGEwEDBhMCDAcBFRIIAxMAEwETAgcVEoCBARMACQAAFRKAgQETAAcgAgITABMABxUS
+gIEBEwEHFRKAgQETAgUgAQgTAAgHAxMAEwETAgITAAMgAA4CEwECEwIJAAMOEoCJDh0cCBUSDAIT
+ABMBCgcBFRIMAhMAEwEGBwITABMBDQcIDg4ODhJNElESVQ4GFRIMAg4OByACARMAEwENFRIIAw4d
+FRIMAg4OCAkgAwETABMBEwIEAAEOHAUgABKAkQUAAg4ODgUgAgEODgUAABKAmQggAwEOEoCZDg0g
+AhUSgJ0BElUOEoChBxUSgJ0BElUEIAATAAMgAAIFIAASgKEIIAAVEoCdAQ4GFRKAnQEOBgABEoCl
+DgYgARKAqQ4GIAESgKkcBAABAg4JIAMBEl0dCBJhAwYSXQMGHQgEIAEOCAQgAQIIBSACAQgcByAC
+Ag4RgLkFIAEdCAgIAAESgL0RgMEFIAASgMUHIAIBDhKAxQi3elxWGTTgiQiJhF3NgIDMkQiwP19/
+EdUKOggwrU/msqau7QMGEhwDBhIgAwYSZQMGEm0DBhJxAwYSKAQgABMBBCAAEwIEIAECHAMgAAgF
+IAEBEhQEIAEBAgkgBAEIDhJdEmEFIAEBEmUEAAASbQQAABJxBQABARJxBAAAEigDAAABBCgAEwAE
+KAATAQQoABMCAygADgMoAAIECAASbQQIABJxBAgAEigIAQAIAAAAAAAeAQABAFQCFldyYXBOb25F
+eGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzllMjNiZmUyNzdjZTQyYzg5MDdjYjAxNmFi
+ZDUyZjJmAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjQAAE0BABwuTkVURnJhbWV3b3JrLFZl
+cnNpb249djQuNy4yAQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRQuTkVUIEZyYW1ld29yayA0Ljcu
+MgQBAAAACAEAAAAAAAAAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291
+cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1
+YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVz
+b3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAADxBAAAAAAAAAAAAAFZBAAAAIAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAABIQQAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/
+JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAA
+AAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWGAA
+AOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+
+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBh
+AHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAA
+sARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAwADAANABi
+ADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4AeQBOAGEA
+bQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMAQwBf
+ADkAZQAyADMAYgBmAGUAMgA3ADcAYwBlADQAMgBjADgAOQAwADcAYwBiADAAMQA2AGEAYgBkADUA
+MgBmADIAZgAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAwAC4AMAAA
+AHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AOQBlADIAMwBiAGYAZQAyADcA
+NwBjAGUANAAyAGMAOAA5ADAANwBjAGIAMAAxADYAYQBiAGQANQAyAGYAMgBmAC4AZABsAGwAAABI
+ABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAgAEAA
+IAAgADIAMAAyADQAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAAAAAA
+AHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwA5AGUAMgAzAGIA
+ZgBlADIANwA3AGMAZQA0ADIAYwA4ADkAMAA3AGMAYgAwADEANgBhAGIAZAA1ADIAZgAyAGYALgBk
+AGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8AOQBlADIAMwBiAGYA
+ZQAyADcANwBjAGUANAAyAGMAOAA5ADAANwBjAGIAMAAxADYAYQBiAGQANQAyAGYAMgBmAAAANAAI
+AAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAABAEEA
+cwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAwAAABoMQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do projeto do Microsoft Visual Studio Tools for Applications. Os nomes de projeto devem ser exclusivos dentro de um pacote."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_9e23bfe277ce42c8907cb016abd52f2f</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a linguagem de programação usada pelo script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica uma lista separada por vírgulas das variáveis somente leitura."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica uma lista separada por vírgulas das variáveis de gravação/leitura."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Lista dos pontos de interrupção presentes no script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Efetua a soma de verificação para corresponder metadados do componente aos códigos compilados."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">90</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\Componente Script.Inputs[Entrada 0]"
+                  hasSideEffects="true"
+                  name="Entrada 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Componente Script.Inputs[Entrada 0].Columns[Clube_Nome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Clube_Nome"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Nome]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Componente Script.Outputs[Saída 0]"
+                  name="Saída 0"
+                  synchronousInputId="Package\Insert_DimClubes\Componente Script.Inputs[Entrada 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Componente Script.Outputs[Saída 0].Columns[ClubeCodigo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Insert_DimClubes\Componente Script.Outputs[Saída 0].Columns[ClubeCodigo]"
+                      name="ClubeCodigo" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Conditional Split.Inputs[Conditional Split Input].Columns[Clube_Nome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Clube_Nome"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Nome]" />
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Conditional Split.Inputs[Conditional Split Input].Columns[Clube_Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Clube_Code"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Code]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Conditional Split.Outputs[Case 2]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 2"
+                  synchronousInputId="Package\Insert_DimClubes\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Code]}) &amp;&amp; [ISNULL](#{Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Nome]}) ==  FALSE </property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(Clube_Code) &amp;&amp; ISNULL(Clube_Nome) ==  FALSE </property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Insert_DimClubes\Conditional Split.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\Insert_DimClubes\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Nome]}) ==  FALSE </property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(Clube_Nome) ==  FALSE </property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Insert_DimClubes\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Insert_DimClubes\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Insert_DimClubes\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Insert_DimClubes\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\Converter 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Converter 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\Converter 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Converter 1.Inputs[Derived Column Input].Columns[ClubeCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ClubeCode"
+                      lineageId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubeCode]" />
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Converter 1.Inputs[Derived Column Input].Columns[ClubePais]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ClubePais"
+                      lineageId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubePais]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Insert_DimClubes\Converter 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Output].Columns[ClubeCode_STR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Output].Columns[ClubeCode_STR]"
+                      name="ClubeCode_STR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,255,1252)#{Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubeCode]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,255,1252)ClubeCode</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Output].Columns[ClubePais_STR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Output].Columns[ClubePais_STR]"
+                      name="ClubePais_STR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,255,1252)#{Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubePais]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,255,1252)ClubePais</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Insert_DimClubes\Converter 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\Converter 2"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Converter 2"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\Converter 2.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Converter 2.Inputs[Derived Column Input].Columns[Nome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Nome"
+                      lineageId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].Columns[Nome]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Insert_DimClubes\Converter 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Output].Columns[Nome_STR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Output].Columns[Nome_STR]"
+                      name="Nome_STR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,255,1252)#{Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].Columns[Nome]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,255,1252)Nome</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Insert_DimClubes\Converter 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\Dim_Clubes"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="Dim_Clubes"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">DimClubes</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert_DimClubes\Dim_Clubes.Connections[ODBCConnection]"
+                  connectionManagerID="{55184156-CD34-4453-9463-7F5EED9E93B8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[freesqldatabase.sql7738411]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input].ExternalColumns[ID_Pais]"
+                      lineageId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input].Columns[ClubeNome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubeNome"
+                      externalMetadataColumnId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input].ExternalColumns[Nome]"
+                      lineageId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output].Columns[ClubeNome]" />
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input].Columns[ClubeCode_STR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubeCode_STR"
+                      externalMetadataColumnId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input].ExternalColumns[Nome_Codigo]"
+                      lineageId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output].Columns[ClubeCode_STR]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input].ExternalColumns[Nome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Nome" />
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input].ExternalColumns[ID_Pais]"
+                      dataType="i4"
+                      name="ID_Pais" />
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input].ExternalColumns[Nome_Codigo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Nome_Codigo" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Dim_Clubes.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Dim_Clubes.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Dim_Clubes.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Dim_Clubes.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Dim_Clubes.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\Dim_Pais"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Source"
+              name="Dim_Pais"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">DimPais</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert_DimClubes\Dim_Pais.Connections[ODBCConnection]"
+                  connectionManagerID="{55184156-CD34-4453-9463-7F5EED9E93B8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[freesqldatabase.sql7738411]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].Columns[ID]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].Columns[Nome]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].ExternalColumns[Nome]"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].Columns[Nome]"
+                      name="Nome" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].ExternalColumns[Nome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Nome" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Error Output].Columns[ID]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Error Output].Columns[Nome]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].ExternalColumns[Nome]"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Error Output].Columns[Nome]"
+                      name="Nome" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\Juntar"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Juntar"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\Juntar.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Juntar.Inputs[Merge Join Left Input].Columns[ClubePais_STR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubePais_STR"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output].Columns[ClubePais_STR]" />
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Juntar.Inputs[Merge Join Left Input].Columns[ClubeNome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubeNome"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output].Columns[ClubeNome]" />
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Juntar.Inputs[Merge Join Left Input].Columns[ClubeCode_STR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubeCode_STR"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output].Columns[ClubeCode_STR]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Insert_DimClubes\Juntar.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Juntar.Inputs[Merge Join Right Input].Columns[Nome_STR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Nome_STR"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 2.Outputs[Sort Output].Columns[Nome_STR]" />
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Juntar.Inputs[Merge Join Right Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 2.Outputs[Sort Output].Columns[ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output].Columns[ID]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output].Columns[ID]"
+                      name="ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Insert_DimClubes\Juntar.Inputs[Merge Join Right Input].Columns[ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output].Columns[ClubeNome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output].Columns[ClubeNome]"
+                      name="ClubeNome">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Insert_DimClubes\Juntar.Inputs[Merge Join Left Input].Columns[ClubeNome]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output].Columns[ClubeCode_STR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output].Columns[ClubeCode_STR]"
+                      name="ClubeCode_STR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Insert_DimClubes\Juntar.Inputs[Merge Join Left Input].Columns[ClubeCode_STR]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\ODBC Destination"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="ODBC Destination"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">DimClubes</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert_DimClubes\ODBC Destination.Connections[ODBCConnection]"
+                  connectionManagerID="{55184156-CD34-4453-9463-7F5EED9E93B8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[freesqldatabase.sql7738411]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input].Columns[Clube_Nome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Clube_Nome"
+                      externalMetadataColumnId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Nome]"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Nome]" />
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input].Columns[Clube_Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Clube_Code"
+                      externalMetadataColumnId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Nome_Codigo]"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Code]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Nome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Nome" />
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[ID_Pais]"
+                      dataType="i4"
+                      name="ID_Pais" />
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Nome_Codigo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Nome_Codigo" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\ODBC Destination.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\ODBC Source"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Source"
+              name="ODBC Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">Json_Clubes</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert_DimClubes\ODBC Source.Connections[ODBCConnection]"
+                  connectionManagerID="{55184156-CD34-4453-9463-7F5EED9E93B8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[freesqldatabase.sql7738411]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Nome_Liga]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Nome_Liga]"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Nome_Liga]"
+                      name="Nome_Liga" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Nome]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Clube_Nome]"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Nome]"
+                      name="Clube_Nome" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Clube_Code]"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Code]"
+                      name="Clube_Code" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Clube_Pais]"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Pais]"
+                      name="Clube_Pais" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Nome_Liga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Nome_Liga" />
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Clube_Nome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Clube_Nome" />
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Clube_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Clube_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Clube_Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Clube_Pais" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[Nome_Liga]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Nome_Liga]"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[Nome_Liga]"
+                      name="Nome_Liga" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[Clube_Nome]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Clube_Nome]"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[Clube_Nome]"
+                      name="Clube_Nome" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[Clube_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Clube_Code]"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[Clube_Code]"
+                      name="Clube_Code" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[Clube_Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Clube_Pais]"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[Clube_Pais]"
+                      name="Clube_Pais" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\Ordernar País 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Ordernar País 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\Ordernar País 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 1.Inputs[Sort Input].Columns[ClubeNome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubeNome"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubeNome]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 1.Inputs[Sort Input].Columns[ClubeCode_STR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubeCode_STR"
+                      lineageId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubeCode_STR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 1.Inputs[Sort Input].Columns[ClubePais_STR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubePais_STR"
+                      lineageId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubePais_STR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output].Columns[ClubeNome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output].Columns[ClubeNome]"
+                      name="ClubeNome">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubeNome]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output].Columns[ClubeCode_STR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output].Columns[ClubeCode_STR]"
+                      name="ClubeCode_STR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubeCode_STR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output].Columns[ClubePais_STR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output].Columns[ClubePais_STR]"
+                      name="ClubePais_STR"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubePais_STR]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\Ordernar País 2"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Ordernar País 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\Ordernar País 2.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 2.Inputs[Sort Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      lineageId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].Columns[ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 2.Inputs[Sort Input].Columns[Nome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Nome"
+                      lineageId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].Columns[Nome]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 2.Inputs[Sort Input].Columns[Nome_STR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Nome_STR"
+                      lineageId="Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Output].Columns[Nome_STR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Ordernar País 2.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 2.Outputs[Sort Output].Columns[ID]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 2.Outputs[Sort Output].Columns[ID]"
+                      name="ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].Columns[ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 2.Outputs[Sort Output].Columns[Nome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 2.Outputs[Sort Output].Columns[Nome]"
+                      name="Nome">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output].Columns[Nome]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Ordernar País 2.Outputs[Sort Output].Columns[Nome_STR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Ordernar País 2.Outputs[Sort Output].Columns[Nome_STR]"
+                      name="Nome_STR"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Output].Columns[Nome_STR]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\Remover Equipas Repetidas"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Remover Equipas Repetidas"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\Remover Equipas Repetidas.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Remover Equipas Repetidas.Inputs[Sort Input].Columns[ClubeNome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubeNome"
+                      lineageId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubeNome]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Remover Equipas Repetidas.Inputs[Sort Input].Columns[ClubeCode_STR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubeCode_STR"
+                      lineageId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Output].Columns[ClubeCode_STR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Remover Equipas Repetidas.Inputs[Sort Input].Columns[ClubePais_STR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ClubePais_STR"
+                      lineageId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Output].Columns[ClubePais_STR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubeNome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubeNome]"
+                      name="ClubeNome"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubeNome]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubeCode_STR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubeCode_STR]"
+                      name="ClubeCode_STR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Output].Columns[ClubeCode_STR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubePais_STR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output].Columns[ClubePais_STR]"
+                      name="ClubePais_STR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Output].Columns[ClubePais_STR]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert_DimClubes\Tratar de Valores NULL"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Tratar de Valores NULL"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Insert_DimClubes\Tratar de Valores NULL.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Tratar de Valores NULL.Inputs[Derived Column Input].Columns[Clube_Nome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Clube_Nome"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Nome]" />
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Tratar de Valores NULL.Inputs[Derived Column Input].Columns[Clube_Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Clube_Code"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Code]" />
+                    <inputColumn
+                      refId="Package\Insert_DimClubes\Tratar de Valores NULL.Inputs[Derived Column Input].Columns[Clube_Pais]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Clube_Pais"
+                      lineageId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Pais]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Insert_DimClubes\Tratar de Valores NULL.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubeNome]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubeNome]"
+                      name="ClubeNome"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,255,1252)#{Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Nome]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,255,1252)Clube_Nome</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubeCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubeCode]"
+                      name="ClubeCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Code]}) ? "undefined" : (DT_STR,255,1252)#{Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Code]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(Clube_Code) ? "undefined" : (DT_STR,255,1252)Clube_Code</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubePais]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output].Columns[ClubePais]"
+                      name="ClubePais"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Pais]}) ? "undefined" : (DT_STR,255,1252)#{Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output].Columns[Clube_Pais]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(Clube_Pais) ? "undefined" : (DT_STR,255,1252)Clube_Pais</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Insert_DimClubes\Tratar de Valores NULL.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Insert_DimClubes.Paths[Case 1]"
+              endId="Package\Insert_DimClubes\Tratar de Valores NULL.Inputs[Derived Column Input]"
+              name="Case 1"
+              startId="Package\Insert_DimClubes\Conditional Split.Outputs[Case 1]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[Case 2]"
+              endId="Package\Insert_DimClubes\Componente Script.Inputs[Entrada 0]"
+              name="Case 2"
+              startId="Package\Insert_DimClubes\Conditional Split.Outputs[Case 2]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[Derived Column Output]"
+              endId="Package\Insert_DimClubes\Converter 1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Insert_DimClubes\Tratar de Valores NULL.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[Derived Column Output1]"
+              endId="Package\Insert_DimClubes\Remover Equipas Repetidas.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\Insert_DimClubes\Converter 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[Derived Column Output2]"
+              endId="Package\Insert_DimClubes\Ordernar País 2.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\Insert_DimClubes\Converter 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[Merge Join Output]"
+              endId="Package\Insert_DimClubes\Dim_Clubes.Inputs[ODBC Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Insert_DimClubes\Juntar.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[ODBC Source Output]"
+              endId="Package\Insert_DimClubes\Conditional Split.Inputs[Conditional Split Input]"
+              name="ODBC Source Output"
+              startId="Package\Insert_DimClubes\ODBC Source.Outputs[ODBC Source Output]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[ODBC Source Output1]"
+              endId="Package\Insert_DimClubes\Converter 2.Inputs[Derived Column Input]"
+              name="ODBC Source Output"
+              startId="Package\Insert_DimClubes\Dim_Pais.Outputs[ODBC Source Output]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[Saída 0]"
+              endId="Package\Insert_DimClubes\ODBC Destination.Inputs[ODBC Destination Input]"
+              name="Saída 0"
+              startId="Package\Insert_DimClubes\Componente Script.Outputs[Saída 0]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[Sort Output]"
+              endId="Package\Insert_DimClubes\Ordernar País 1.Inputs[Sort Input]"
+              name="Sort Output"
+              startId="Package\Insert_DimClubes\Remover Equipas Repetidas.Outputs[Sort Output]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[Sort Output1]"
+              endId="Package\Insert_DimClubes\Juntar.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Insert_DimClubes\Ordernar País 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\Insert_DimClubes.Paths[Sort Output2]"
+              endId="Package\Insert_DimClubes\Juntar.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Insert_DimClubes\Ordernar País 2.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate_DimClubes"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:DTSID="{BB4763D0-24A0-4763-9004-ACDBA6836F9E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="2070"
+      DTS:ObjectName="Truncate_DimClubes"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{55184156-CD34-4453-9463-7F5EED9E93B8}"
+          SQLTask:SqlStatementSource="Truncate Table DimClubes;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição]"
+      DTS:CreationName=""
+      DTS:DTSID="{50A2628F-A75E-41DE-B166-BB03B2883DA6}"
+      DTS:From="Package\Truncate_DimClubes"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição"
+      DTS:To="Package\Insert_DimClubes" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Insert_DimClubes"
+          TopLeft="279.5,27.5" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Truncate_DimClubes"
+          TopLeft="46,28" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição]"
+          TopLeft="228,48.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.5,0"
+              Start="0,0"
+              End="44,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="44,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Insert_DimClubes">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Insert_DimClubes\Ordernar País 2"
+          TopLeft="868.111111111111,331.666666666667" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Insert_DimClubes\Converter 1"
+          TopLeft="254,307" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Insert_DimClubes\Converter 2"
+          TopLeft="832.111111111111,212.666666666667" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Insert_DimClubes\Ordernar País 1"
+          TopLeft="591.611111111111,248.529553733664" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Insert_DimClubes\Tratar de Valores NULL"
+          TopLeft="79,225" />
+        <NodeLayout
+          Size="219,42"
+          Id="Package\Insert_DimClubes\Remover Equipas Repetidas"
+          TopLeft="435.111111111111,164.666666666667" />
+        <NodeLayout
+          Size="110,42"
+          Id="Package\Insert_DimClubes\Juntar"
+          TopLeft="669.111111111111,346.666666666667" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Insert_DimClubes\Conditional Split"
+          TopLeft="65.1111111111111,114.111111111111" />
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[Sort Output2]"
+          TopLeft="868.111111111111,352.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-89,15"
+              Start="0,0"
+              End="-81.5,15">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-40.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-40.5,0"
+                    Point2="-44.5,0"
+                    Point3="-44.5,4" />
+                  <mssgle:LineSegment
+                    End="-44.5,11" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-44.5,11"
+                    Point2="-44.5,15"
+                    Point3="-48.5,15" />
+                  <mssgle:LineSegment
+                    End="-81.5,15" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[Sort Output1]"
+          TopLeft="669.611111111111,290.529553733664">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.5,56.1371129330032"
+              Start="0,0"
+              End="54.5,48.6371129330032">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0685564665016" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.0685564665016"
+                    Point2="0,28.0685564665016"
+                    Point3="4,28.0685564665016" />
+                  <mssgle:LineSegment
+                    End="50.5,28.0685564665016" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.5,28.0685564665016"
+                    Point2="54.5,28.0685564665016"
+                    Point3="54.5,32.0685564665016" />
+                  <mssgle:LineSegment
+                    End="54.5,48.6371129330032" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[Sort Output]"
+          TopLeft="579.777777777778,206.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="89.8333333333334,41.8628870669968"
+              Start="0,0"
+              End="89.8333333333334,34.3628870669968">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.9273323951773" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.9273323951773"
+                    Point2="0,16.9273323951773"
+                    Point3="4,16.9273323951773" />
+                  <mssgle:LineSegment
+                    End="85.8333333333334,16.9273323951773" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85.8333333333334,16.9273323951773"
+                    Point2="89.8333333333334,16.9273323951773"
+                    Point3="89.8333333333334,20.9273323951773" />
+                  <mssgle:LineSegment
+                    End="89.8333333333334,34.3628870669968" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[Derived Column Output2]"
+          TopLeft="911.111111111111,254.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35,77"
+              Start="0,0"
+              End="35,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5"
+                    Point2="0,38.5"
+                    Point3="4,38.5" />
+                  <mssgle:LineSegment
+                    End="31,38.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31,38.5"
+                    Point2="35,38.5"
+                    Point3="35,42.5" />
+                  <mssgle:LineSegment
+                    End="35,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[Derived Column Output1]"
+          TopLeft="358,307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="151.444444444444,-100.333333333333"
+              Start="0,0"
+              End="151.444444444444,-92.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-46.3397725987102" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-46.3397725987102"
+                    Point2="0,-50.3397725987102"
+                    Point3="4,-50.3397725987102" />
+                  <mssgle:LineSegment
+                    End="147.444444444444,-50.3397725987102" />
+                  <mssgle:CubicBezierSegment
+                    Point1="147.444444444444,-50.3397725987102"
+                    Point2="151.444444444444,-50.3397725987102"
+                    Point3="151.444444444444,-54.3397725987102" />
+                  <mssgle:LineSegment
+                    End="151.444444444444,-92.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[Derived Column Output]"
+          TopLeft="176.5,267">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="131.5,40"
+              Start="0,0"
+              End="131.5,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.7593984962406" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.7593984962406"
+                    Point2="0,23.7593984962406"
+                    Point3="4,23.7593984962406" />
+                  <mssgle:LineSegment
+                    End="127.5,23.7593984962406" />
+                  <mssgle:CubicBezierSegment
+                    Point1="127.5,23.7593984962406"
+                    Point2="131.5,23.7593984962406"
+                    Point3="131.5,27.7593984962406" />
+                  <mssgle:LineSegment
+                    End="131.5,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[Case 1]"
+          TopLeft="144.611111111111,156.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.8888888888889,68.8888888888889"
+              Start="0,0"
+              End="31.8888888888889,61.3888888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4444444444445" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.4444444444445"
+                    Point2="0,34.4444444444445"
+                    Point3="4,34.4444444444445" />
+                  <mssgle:LineSegment
+                    End="27.8888888888889,34.4444444444445" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.8888888888889,34.4444444444445"
+                    Point2="31.8888888888889,34.4444444444445"
+                    Point3="31.8888888888889,38.4444444444445" />
+                  <mssgle:LineSegment
+                    End="31.8888888888889,61.3888888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0.726358506944452,39.4444444444445,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Insert_DimClubes\ODBC Source"
+          TopLeft="101,39" />
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[ODBC Source Output]"
+          TopLeft="175.5,81">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-30.8888888888889,33.111111111111"
+              Start="0,0"
+              End="-30.8888888888889,25.611111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5555555555555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5555555555555"
+                    Point2="0,16.5555555555555"
+                    Point3="-4,16.5555555555555" />
+                  <mssgle:LineSegment
+                    End="-26.8888888888889,16.5555555555555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.8888888888889,16.5555555555555"
+                    Point2="-30.8888888888889,16.5555555555555"
+                    Point3="-30.8888888888889,20.5555555555555" />
+                  <mssgle:LineSegment
+                    End="-30.8888888888889,25.611111111111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="126,42"
+          Id="Package\Insert_DimClubes\Dim_Pais"
+          TopLeft="900.111111111111,122.666666666667" />
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[ODBC Source Output1]"
+          TopLeft="963.111111111111,164.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-52,48"
+              Start="0,0"
+              End="-52,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="-4,24" />
+                  <mssgle:LineSegment
+                    End="-48,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-48,24"
+                    Point2="-52,24"
+                    Point3="-52,28" />
+                  <mssgle:LineSegment
+                    End="-52,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Insert_DimClubes\Dim_Clubes"
+          TopLeft="713.111111111111,446.666666666667" />
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[Merge Join Output]"
+          TopLeft="724.111111111111,388.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73.5,58"
+              Start="0,0"
+              End="73.5,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="4,29" />
+                  <mssgle:LineSegment
+                    End="69.5,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="69.5,29"
+                    Point2="73.5,29"
+                    Point3="73.5,33" />
+                  <mssgle:LineSegment
+                    End="73.5,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Insert_DimClubes\ODBC Destination"
+          TopLeft="653,48" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Insert_DimClubes\Componente Script"
+          TopLeft="344,56" />
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[Case 2]"
+          TopLeft="224.111111111111,135.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="119.888888888889,-58.111111111111"
+              Start="0,0"
+              End="112.388888888889,-58.111111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="55.9444444444445,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55.9444444444445,0"
+                    Point2="59.9444444444445,0"
+                    Point3="59.9444444444445,-4" />
+                  <mssgle:LineSegment
+                    End="59.9444444444445,-54.111111111111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59.9444444444445,-54.111111111111"
+                    Point2="59.9444444444445,-58.111111111111"
+                    Point3="63.9444444444445,-58.111111111111" />
+                  <mssgle:LineSegment
+                    End="112.388888888889,-58.111111111111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="44.5408116319445,1,30.807265625,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert_DimClubes.Paths[Saída 0]"
+          TopLeft="517,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136,-8"
+              Start="0,0"
+              End="128.5,-8">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="64,0"
+                    Point2="68,0"
+                    Point3="68,-4" />
+                  <mssgle:LineSegment
+                    End="68,-4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="68,-4"
+                    Point2="68,-8"
+                    Point3="72,-8" />
+                  <mssgle:LineSegment
+                    End="128.5,-8" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="60,1,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert_DimClubes\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert_DimClubes\Dim_Pais">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert_DimClubes\Dim_Clubes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert_DimClubes\ODBC Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

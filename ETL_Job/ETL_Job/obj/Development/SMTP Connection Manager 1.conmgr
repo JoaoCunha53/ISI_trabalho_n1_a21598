@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="SMTP Connection Manager 1"
+  DTS:DTSID="{287D65BD-B983-4D4F-9372-5518BF5FECC0}"
+  DTS:CreationName="SMTP+">
+  <DTS:ObjectData>
+    <ConnectionManager
+      ConnectionString="ConnectionType=ImplicitTLS;ServerHost=smtp.gmail.com;ServerPort=465;TokenStoreType=;TokenId=;ServerTimeout=100;AuthenticationType=NoAuthentication;LogFile=;Pipelining=True;Chunking=True;RetainSameConnection=False;ProxyHost=;ProxyPort=587;ProxyUser=;"
+      ConnectByProxy="False">
+      <ServerUser
+        Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATfHbzT08z0qCj/iBC26EiAAAAAACAAAAAAAQZgAAAAEAACAAAAAqLHvXbj4LLUnHEjgK3AZrKTadCERcFzzgX69aBdg+jwAAAAAOgAAAAAIAACAAAADPGZdhN1eaqW4qM8hUiM0TUlQRDMTHsmT65Yf/6/d1SnAAAABIIKX6jR/B87Z/CPuNLvisMEgpL3tqcSUz+WYqybsM1zDP3uel99LwLtKLpdxdwXvI/sWECmtQr0pfFyXmYP53nQl7JHAX+LhsaB4mDI08w5l8f6XN3jbyvSrRKQgISimj44vBLE+qUVEQcRKqmyagQAAAAJg4dm0N9sFMAkkVx88jbmfIvwtJUKKWpZLZlhH2r5fIxf2GSP+i3Suoz5RNIXV5ItZjkLS9pXV3lTBLeuBv7bs=</ServerUser>
+      <ServerPassword
+        Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATfHbzT08z0qCj/iBC26EiAAAAAACAAAAAAAQZgAAAAEAACAAAAACu6M/j+BvNptd4WNdxtuxxakKdjzQm8jNtqgt9mS3IgAAAAAOgAAAAAIAACAAAAAFtIBNG+6A0Yg9M9eLk7Q4tlaRi2+IZdiB9fhmZhwYTnAAAAD9EQSSiqXjNQUgMhM1w7ziZfuyS0tqrB0Dca7foPdd+YqhoY6kOla8vbe9GpCp2yOezkJAzi5qVLtJtUQWu1QTDKLUVGzdwEBCusBrUKAschszSXJCBm6DQ7QsFstcoKd7/YbvJ8Aq2EVOzu0tN/kaQAAAAJiRkuBwFOoMLoGI6Ad45iN5QDqKzenOJC+rZP7EfOSdJ/LwYha0HxNzgeabCBCf5MbyrPFygaxpgL1JKOzVukw=</ServerPassword>
+    </ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

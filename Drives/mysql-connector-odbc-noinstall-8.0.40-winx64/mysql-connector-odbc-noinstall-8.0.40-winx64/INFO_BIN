@@ -1,0 +1,10 @@
+MySQL Connector/ODBC Build Information
+
+build-date           :  2024-10-01
+os-info              :  Windows-10.0.20348
+build-type           :  RelWithDebInfo
+compiler             :  MSVC 19.29.30154.0
+mysql-version        :  8.0.40
+libmysql-linkage     :  Static
+odbc-manager         :  Windows DM
+

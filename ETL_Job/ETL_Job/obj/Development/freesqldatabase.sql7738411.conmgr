@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="freesqldatabase.sql7738411"
+  DTS:DTSID="{55184156-CD34-4453-9463-7F5EED9E93B8}"
+  DTS:CreationName="ODBC">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="uid=sql7738411;Dsn=freesqldatabase;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

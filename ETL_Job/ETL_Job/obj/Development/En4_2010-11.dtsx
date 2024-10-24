@@ -1,0 +1,709 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/15/2024 10:32:14 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-5G0AINV"
+  DTS:CreatorName="DESKTOP-5G0AINV\João Cunha"
+  DTS:DTSID="{FB00B6E6-D022-473F-9E7D-76B653477DF1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="2070"
+  DTS:ObjectName="En4_2010-11"
+  DTS:PackageType="5"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{E287F6E9-3ABA-4959-99E0-CA6FFC076C37}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-5G0AINV.FotebolDSA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{AC5F5A65-E140-423F-981D-9542F54378AD}"
+      DTS:ObjectName="DESKTOP-5G0AINV.FotebolDSA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-5G0AINV;Initial Catalog=FotebolDSA;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{AC5F5A65-E140-423F-981D-9542F54378AD}DESKTOP-5G0AINV.FotebolDSA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FC6CD2E6-2A7A-4DF1-B40A-7F3EE3F04149}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\JSON Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extracts data from JSON source.; COZYROC LLC; SSIS+; © 2006-2024 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0"
+              description="Extracts data from JSON source."
+              name="JSON Source"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Null"
+                  name="ComponentObject"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.Int32"
+                  description="Represents the source from where JSON string is supplied."
+                  name="Source"
+                  typeConverter="CozyRoc.SqlServer.SSIS.JsonSource+JsonContentSource">2</property>
+                <property
+                  dataType="System.String"
+                  description="The actual JSON string."
+                  expressionType="Notify"
+                  name="JsonString"
+                  UITypeEditor="CozyRoc.SqlServer.SSIS.TextDialogEditor">{
+  "name": "PreNommier League 2010/11",
+  "rounds": [
+    {
+      "name": "Matchday 1",
+      "matches": [
+        {
+          "date": "2010-08-14",
+          "team1": "Bolton Wanderers FC",
+          "team2": "Fulham FC",
+          "score": {
+            "ft": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "date": "2010-08-14",
+          "team1": "Wigan Athletic FC",
+          "team2": "Blackpool FC",
+          "score": {
+            "ft": [
+              0,
+              4
+            ]
+          }
+        }
+        ]
+        }
+        ]
+        }</property>
+                <property
+                  dataType="System.String"
+                  description="The path to the file containing JSON string."
+                  expressionType="Notify"
+                  name="JsonFile">C:\Users\João Cunha\Documents\GitHub\ETL_Job\football.json-master\2010-11\en.4.json</property>
+                <property
+                  dataType="System.Int32"
+                  description="Code page identifier of the JSON file encoding."
+                  name="JsonFileEncodingCodePage">65001</property>
+                <property
+                  dataType="System.Int32"
+                  description="The format of JSON source file"
+                  name="JsonFileFormat"
+                  typeConverter="CozyRoc.SqlServer.SSIS.JsonSource+JsonFileFormat">0</property>
+                <property
+                  dataType="System.Null"
+                  description="The package variable which supplies JSON string."
+                  name="JsonStringVariable"
+                  typeConverter="CozyRoc.SqlServer.SSIS.VariableEditor" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">CozyRoc.JsonSource</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output]"
+                  name="JSON Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].ExternalColumns[name]"
+                      length="256"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].Columns[rounds]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].ExternalColumns[rounds]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].Columns[rounds]"
+                      name="rounds"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="256"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].ExternalColumns[rounds]"
+                      dataType="nText"
+                      name="rounds" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Complete JSON Output]"
+                  name="JSON Source Complete JSON Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Complete JSON Output].Columns[$JSON]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Complete JSON Output].ExternalColumns[$JSON]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Complete JSON Output].Columns[$JSON]"
+                      name="$JSON"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Complete JSON Output].ExternalColumns[$JSON]"
+                      dataType="nText"
+                      description="Represents the complete JSON object."
+                      name="$JSON" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output]"
+                  isErrorOut="true"
+                  name="JSON Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[name]"
+                      dataType="wstr"
+                      length="256"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[name]"
+                      name="name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[rounds]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[rounds]"
+                      name="rounds" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}]"
+                  name="rounds__{}">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The path to the array element within the JSON document"
+                      name="ArrayPath">rounds.{}.</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].ExternalColumns[name]"
+                      length="256"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].Columns[rounds]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].ExternalColumns[rounds]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].Columns[rounds]"
+                      name="rounds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].Columns[rounds.{\}.name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].ExternalColumns[rounds.{\}.name]"
+                      length="256"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].Columns[rounds.{\}.name]"
+                      name="rounds.{}.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].Columns[rounds.{\}.matches]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].ExternalColumns[rounds.{\}.matches]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].Columns[rounds.{\}.matches]"
+                      name="rounds.{}.matches"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="256"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].ExternalColumns[rounds]"
+                      dataType="nText"
+                      name="rounds" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].ExternalColumns[rounds.{\}.name]"
+                      dataType="wstr"
+                      length="256"
+                      name="rounds.{}.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}].ExternalColumns[rounds.{\}.matches]"
+                      dataType="nText"
+                      name="rounds.{}.matches" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}]"
+                  name="rounds__{}__matches__{}">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The path to the array element within the JSON document"
+                      name="ArrayPath">rounds.{}.matches.{}.</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[name]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds]"
+                      name="rounds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.name]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.name]"
+                      name="rounds.{}.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.matches]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches]"
+                      name="rounds.{}.matches"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.matches.{\}.date]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.date]"
+                      name="rounds.{}.matches.{}.date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.team1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.matches.{\}.team1]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.team1]"
+                      name="rounds.{}.matches.{}.team1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.team2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.matches.{\}.team2]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.team2]"
+                      name="rounds.{}.matches.{}.team2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.score.ft]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.matches.{\}.score.ft]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.score.ft]"
+                      name="rounds.{}.matches.{}.score.ft"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="256"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds]"
+                      dataType="nText"
+                      name="rounds" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.name]"
+                      dataType="wstr"
+                      length="256"
+                      name="rounds.{}.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.matches]"
+                      dataType="nText"
+                      name="rounds.{}.matches" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.matches.{\}.date]"
+                      dataType="wstr"
+                      length="256"
+                      name="rounds.{}.matches.{}.date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.matches.{\}.team1]"
+                      dataType="wstr"
+                      length="256"
+                      name="rounds.{}.matches.{}.team1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.matches.{\}.team2]"
+                      dataType="wstr"
+                      length="256"
+                      name="rounds.{}.matches.{}.team2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].ExternalColumns[rounds.{\}.matches.{\}.score.ft]"
+                      dataType="nText"
+                      name="rounds.{}.matches.{}.score.ft" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Json_Jogos]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5G0AINV.FotebolDSA]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5G0AINV.FotebolDSA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="name"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NomeLiga]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rounds.{\}.matches.{\}.date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="rounds.{}.matches.{}.date"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rounds.{\}.matches.{\}.team1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="rounds.{}.matches.{}.team1"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Equipa_Um]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.team1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rounds.{\}.matches.{\}.team2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="rounds.{}.matches.{}.team2"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Equipa_Dois]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.team2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rounds.{\}.matches.{\}.score.ft]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="rounds.{}.matches.{}.score.ft"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Resultado]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.matches.{\}.score.ft]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rounds.{\}.name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="rounds.{}.name"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jogo]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}].Columns[rounds.{\}.name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NomeLiga]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NomeLiga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jogo]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Jogo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Data" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Equipa_Um]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Equipa_Um" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Equipa_Dois]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Equipa_Dois" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Resultado]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Resultado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[rounds__{\}__matches__{\}]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="rounds__{}__matches__{}"
+              startId="Package\Data Flow Task\JSON Source.Outputs[rounds__{\}__matches__{\}]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="402,221" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Data Flow Task\JSON Source"
+          TopLeft="359,79" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[rounds__{\}__matches__{\}]"
+          TopLeft="432,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.5,100"
+              Start="0,0"
+              End="58.5,92.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46"
+                    Point2="0,50"
+                    Point3="4,50" />
+                  <mssgle:LineSegment
+                    End="54.5,50" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.5,50"
+                    Point2="58.5,50"
+                    Point3="58.5,54" />
+                  <mssgle:LineSegment
+                    End="58.5,92.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-30.793828125,55,120.08765625,11.51171875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

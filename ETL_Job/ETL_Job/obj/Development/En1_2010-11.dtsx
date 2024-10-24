@@ -1,0 +1,762 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/15/2024 10:32:14 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-5G0AINV"
+  DTS:CreatorName="DESKTOP-5G0AINV\João Cunha"
+  DTS:DTSID="{F8001EC6-ABC9-49FF-82D1-F111649D5DB2}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="2070"
+  DTS:ObjectName="En1_2010-11"
+  DTS:PackageType="5"
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{4A802A68-CEB0-48EE-ACDB-D2F2D728E0B5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{b11ad004-8e81-4cf3-99d1-b95eecff37bc}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\JSON Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extracts data from JSON source.; COZYROC LLC; SSIS+; © 2006-2024 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0"
+              description="Extracts data from JSON source."
+              name="JSON Source"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Null"
+                  name="ComponentObject"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.Int32"
+                  description="Represents the source from where JSON string is supplied."
+                  name="Source"
+                  typeConverter="CozyRoc.SqlServer.SSIS.JsonSource+JsonContentSource">2</property>
+                <property
+                  dataType="System.String"
+                  description="The actual JSON string."
+                  expressionType="Notify"
+                  name="JsonString"
+                  UITypeEditor="CozyRoc.SqlServer.SSIS.TextDialogEditor">{
+    "games": [
+        {
+            "name": "Premier League 2010/11",
+            "rounds": [
+                {
+                    "name": "Matchday 1",
+                    "matches": [
+                        {
+                            "date": "2010-08-14",
+                            "team1": "Bolton Wanderers FC",
+                            "team2": "Fulham FC",
+                            "score": {
+                                "ft": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "date": "2010-08-14",
+                            "team1": "Wigan Athletic FC",
+                            "team2": "Blackpool FC",
+                            "score": {
+                                "ft": [
+                                    0,
+                                    4
+                                ]
+                            }
+                        }
+                      ]
+                    }
+                  ]
+                 }
+               ]
+              }
+                </property>
+                <property
+                  dataType="System.String"
+                  description="The path to the file containing JSON string."
+                  expressionType="Notify"
+                  name="JsonFile">C:\Users\João Cunha\Documents\GitHub\ISI_trabalho_n1\ETL_Job\Json\2010-11\en.1.json</property>
+                <property
+                  dataType="System.Int32"
+                  description="Code page identifier of the JSON file encoding."
+                  name="JsonFileEncodingCodePage">65001</property>
+                <property
+                  dataType="System.Int32"
+                  description="The format of JSON source file"
+                  name="JsonFileFormat"
+                  typeConverter="CozyRoc.SqlServer.SSIS.JsonSource+JsonFileFormat">0</property>
+                <property
+                  dataType="System.Null"
+                  description="The package variable which supplies JSON string."
+                  name="JsonStringVariable"
+                  typeConverter="CozyRoc.SqlServer.SSIS.VariableEditor" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">CozyRoc.JsonSource</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output]"
+                  name="JSON Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].Columns[games]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].ExternalColumns[games]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].Columns[games]"
+                      name="games"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Output].ExternalColumns[games]"
+                      dataType="nText"
+                      name="games" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Complete JSON Output]"
+                  name="JSON Source Complete JSON Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Complete JSON Output].Columns[$JSON]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Complete JSON Output].ExternalColumns[$JSON]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Complete JSON Output].Columns[$JSON]"
+                      name="$JSON"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Complete JSON Output].ExternalColumns[$JSON]"
+                      dataType="nText"
+                      description="Represents the complete JSON object."
+                      name="$JSON" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output]"
+                  isErrorOut="true"
+                  name="JSON Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[games]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[JSON Source Error Output].Columns[games]"
+                      name="games" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}]"
+                  name="games__{}">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The path to the array element within the JSON document"
+                      name="ArrayPath">games.{}.</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].Columns[games]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].ExternalColumns[games]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].Columns[games]"
+                      name="games"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].Columns[games.{\}.name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].ExternalColumns[games.{\}.name]"
+                      length="256"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].Columns[games.{\}.name]"
+                      name="games.{}.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].Columns[games.{\}.rounds]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].ExternalColumns[games.{\}.rounds]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].Columns[games.{\}.rounds]"
+                      name="games.{}.rounds"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].ExternalColumns[games]"
+                      dataType="nText"
+                      name="games" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].ExternalColumns[games.{\}.name]"
+                      dataType="wstr"
+                      length="256"
+                      name="games.{}.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}].ExternalColumns[games.{\}.rounds]"
+                      dataType="nText"
+                      name="games.{}.rounds" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}]"
+                  name="games__{}__rounds__{}">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The path to the array element within the JSON document"
+                      name="ArrayPath">games.{}.rounds.{}.</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].Columns[games]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].ExternalColumns[games]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].Columns[games]"
+                      name="games"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].Columns[games.{\}.name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].ExternalColumns[games.{\}.name]"
+                      length="256"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].Columns[games.{\}.name]"
+                      name="games.{}.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].Columns[games.{\}.rounds]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].ExternalColumns[games.{\}.rounds]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].Columns[games.{\}.rounds]"
+                      name="games.{}.rounds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].Columns[games.{\}.rounds.{\}.name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].ExternalColumns[games.{\}.rounds.{\}.name]"
+                      length="256"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].Columns[games.{\}.rounds.{\}.name]"
+                      name="games.{}.rounds.{}.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].Columns[games.{\}.rounds.{\}.matches]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].ExternalColumns[games.{\}.rounds.{\}.matches]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].Columns[games.{\}.rounds.{\}.matches]"
+                      name="games.{}.rounds.{}.matches"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].ExternalColumns[games]"
+                      dataType="nText"
+                      name="games" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].ExternalColumns[games.{\}.name]"
+                      dataType="wstr"
+                      length="256"
+                      name="games.{}.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].ExternalColumns[games.{\}.rounds]"
+                      dataType="nText"
+                      name="games.{}.rounds" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].ExternalColumns[games.{\}.rounds.{\}.name]"
+                      dataType="wstr"
+                      length="256"
+                      name="games.{}.rounds.{}.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}].ExternalColumns[games.{\}.rounds.{\}.matches]"
+                      dataType="nText"
+                      name="games.{}.rounds.{}.matches" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}]"
+                  name="games__{}__rounds__{}__matches__{}">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The path to the array element within the JSON document"
+                      name="ArrayPath">games.{}.rounds.{}.matches.{}.</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games]"
+                      name="games"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.name]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.name]"
+                      name="games.{}.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds]"
+                      name="games.{}.rounds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.name]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.name]"
+                      name="games.{}.rounds.{}.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.matches]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches]"
+                      name="games.{}.rounds.{}.matches"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.matches.{\}.date]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.date]"
+                      name="games.{}.rounds.{}.matches.{}.date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.team1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.matches.{\}.team1]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.team1]"
+                      name="games.{}.rounds.{}.matches.{}.team1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.team2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.matches.{\}.team2]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.team2]"
+                      name="games.{}.rounds.{}.matches.{}.team2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.score.ft]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.matches.{\}.score.ft]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.score.ft]"
+                      name="games.{}.rounds.{}.matches.{}.score.ft"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games]"
+                      dataType="nText"
+                      name="games" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.name]"
+                      dataType="wstr"
+                      length="256"
+                      name="games.{}.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds]"
+                      dataType="nText"
+                      name="games.{}.rounds" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.name]"
+                      dataType="wstr"
+                      length="256"
+                      name="games.{}.rounds.{}.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.matches]"
+                      dataType="nText"
+                      name="games.{}.rounds.{}.matches" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.matches.{\}.date]"
+                      dataType="wstr"
+                      length="256"
+                      name="games.{}.rounds.{}.matches.{}.date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.matches.{\}.team1]"
+                      dataType="wstr"
+                      length="256"
+                      name="games.{}.rounds.{}.matches.{}.team1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.matches.{\}.team2]"
+                      dataType="wstr"
+                      length="256"
+                      name="games.{}.rounds.{}.matches.{}.team2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].ExternalColumns[games.{\}.rounds.{\}.matches.{\}.score.ft]"
+                      dataType="nText"
+                      name="games.{}.rounds.{}.matches.{}.score.ft" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\ODBC Destination"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="ODBC Destination"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">Json_Jogos</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\ODBC Destination.Connections[ODBCConnection]"
+                  connectionManagerID="{55184156-CD34-4453-9463-7F5EED9E93B8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[freesqldatabase.sql7738411]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[games.{\}.name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="games.{}.name"
+                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[NomeLiga]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[games.{\}.rounds.{\}.name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="games.{}.rounds.{}.name"
+                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Ronda]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[games.{\}.rounds.{\}.matches.{\}.date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="games.{}.rounds.{}.matches.{}.date"
+                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Data]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[games.{\}.rounds.{\}.matches.{\}.team1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="games.{}.rounds.{}.matches.{}.team1"
+                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Equipa_Um]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.team1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[games.{\}.rounds.{\}.matches.{\}.team2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="games.{}.rounds.{}.matches.{}.team2"
+                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Equipa_Dois]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.team2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[games.{\}.rounds.{\}.matches.{\}.score.ft]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="games.{}.rounds.{}.matches.{}.score.ft"
+                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Resultado]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}].Columns[games.{\}.rounds.{\}.matches.{\}.score.ft]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[NomeLiga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="NomeLiga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Ronda]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Ronda" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Data]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Data" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Equipa_Um]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Equipa_Um" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Equipa_Dois]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Equipa_Dois" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Resultado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Resultado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\ODBC Destination.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[games__{\}__rounds__{\}__matches__{\}]"
+              endId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input]"
+              name="games__{}__rounds__{}__matches__{}"
+              startId="Package\Data Flow Task\JSON Source.Outputs[games__{\}__rounds__{\}__matches__{\}]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Data Flow Task\JSON Source"
+          TopLeft="359,79" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Data Flow Task\ODBC Destination"
+          TopLeft="615,202" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[games__{\}__rounds__{\}__matches__{\}]"
+          TopLeft="430,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="269.5,81"
+              Start="0,0"
+              End="269.5,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.5"
+                    Point2="0,40.5"
+                    Point3="4,40.5" />
+                  <mssgle:LineSegment
+                    End="265.5,40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="265.5,40.5"
+                    Point2="269.5,40.5"
+                    Point3="269.5,44.5" />
+                  <mssgle:LineSegment
+                    End="269.5,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="3.64460937499999,45.5,262.21078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\ODBC Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
