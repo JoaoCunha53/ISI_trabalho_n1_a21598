@@ -54,3 +54,7 @@ Este projeto foi desenvolvido para fins acadêmicos.
 
 Em caso de dúvidas, entre em contato:
 - João Rafael Azevedo Cunha (a21598)
+
+## Video
+
+https://alunosipca-my.sharepoint.com/personal/a21598_alunos_ipca_pt/_layouts/15/stream.aspx?id=%2Fpersonal%2Fa21598_alunos_ipca_pt%2FDocuments%2FVideo_TP1_a21598%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E4d004414-03a0-4fa5-930a-88fc4b206e8a
