@@ -1,30 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\",
+  "WorkspaceRootPath": "C:\\Users\\Jo\u00E3o Cunha\\Documents\\GitHub\\ISI_trabalho_n1_a21598\\ETL_Job\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimJogos_1.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|solutionrelative:ETL_Job\\DimJogos_1.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimClubes.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|solutionrelative:ETL_Job\\DimClubes.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimCompeticoes.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|solutionrelative:ETL_Job\\DimCompeticoes.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimPais.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|solutionrelative:ETL_Job\\DimPais.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\GetJogos.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|solutionrelative:ETL_Job\\GetJogos.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\GetClubes.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|solutionrelative:ETL_Job\\GetClubes.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|C:\\Users\\Jo\u00E3o Cunha\\Documents\\GitHub\\ISI_trabalho_n1_a21598\\ETL_Job\\ETL_Job\\Project.params||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{0950C883-0AFA-43DA-866D-A019036EF5B4}|ETL_Job\\ETL_Job.dtproj|solutionrelative:ETL_Job\\Project.params||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,74 +22,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DimClubes.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimClubes.dtsx",
-              "RelativeDocumentMoniker": "ETL_Job\\DimClubes.dtsx",
-              "ToolTip": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimClubes.dtsx [Design]",
-              "RelativeToolTip": "ETL_Job\\DimClubes.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-10-24T11:36:01.298Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DimCompeticoes.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimCompeticoes.dtsx",
-              "RelativeDocumentMoniker": "ETL_Job\\DimCompeticoes.dtsx",
-              "ToolTip": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimCompeticoes.dtsx [Design]",
-              "RelativeToolTip": "ETL_Job\\DimCompeticoes.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-10-24T11:35:46.287Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DimPais.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimPais.dtsx",
-              "RelativeDocumentMoniker": "ETL_Job\\DimPais.dtsx",
-              "ToolTip": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimPais.dtsx [Design]",
-              "RelativeToolTip": "ETL_Job\\DimPais.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-10-24T11:35:37.21Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetJogos.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\GetJogos.dtsx",
-              "RelativeDocumentMoniker": "ETL_Job\\GetJogos.dtsx",
-              "ToolTip": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\GetJogos.dtsx [Design]",
-              "RelativeToolTip": "ETL_Job\\GetJogos.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-10-24T11:28:00.645Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetClubes.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\GetClubes.dtsx",
-              "RelativeDocumentMoniker": "ETL_Job\\GetClubes.dtsx",
-              "ToolTip": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\GetClubes.dtsx [Design]",
-              "RelativeToolTip": "ETL_Job\\GetClubes.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-10-24T11:27:29.215Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DimJogos_1.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimJogos_1.dtsx",
-              "RelativeDocumentMoniker": "ETL_Job\\DimJogos_1.dtsx",
-              "ToolTip": "C:\\Users\\Jo\u00E3o Cunha\\Downloads\\ISI_trabalho_n1-main\\ISI_trabalho_n1-main\\ETL_Job\\ETL_Job\\DimJogos_1.dtsx [Design]",
-              "RelativeToolTip": "ETL_Job\\DimJogos_1.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-10-24T11:36:16.854Z",
+              "Title": "Project.params [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo\u00E3o Cunha\\Documents\\GitHub\\ISI_trabalho_n1_a21598\\ETL_Job\\ETL_Job\\Project.params",
+              "RelativeDocumentMoniker": "ETL_Job\\Project.params",
+              "ToolTip": "C:\\Users\\Jo\u00E3o Cunha\\Documents\\GitHub\\ISI_trabalho_n1_a21598\\ETL_Job\\ETL_Job\\Project.params [Design]",
+              "RelativeToolTip": "ETL_Job\\Project.params [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-25T08:20:21.477Z",
               "EditorCaption": " [Design]"
             }
           ]
